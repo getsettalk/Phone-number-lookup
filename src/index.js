@@ -8,7 +8,7 @@ const os = require('os');
 // about ox bit of system
 
 
-const port =80;
+const port =process.env.PORT || 8200;
 
 //aquaring static files like css, image ,js  etc.. 
 const staticPath = path.join(__dirname,'../public');
@@ -56,13 +56,14 @@ app.post('/search',(req,res)=>{
         sn.then(function(response) {
         
             var rs= JSON.parse(response);
+            // console.log(rs);
             // res.send(rs.data[0].name)
             res.render("search",{
                 phone:ph,
                 access:rs.data[0].access, 
                 name:rs.data[0].name,
                 city:rs.data[0].city,
-                image:rs.data[0].image,
+                imgSrc:rs.data[0].image,
                 id:rs.data[0].id,
                 numberType:rs.data[0].numberType,
                 timeZone:rs.data[0].timeZone ,
