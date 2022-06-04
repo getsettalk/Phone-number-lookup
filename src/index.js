@@ -31,7 +31,9 @@ app.get('/',(req,res)=>{
 });
 
 app.get('/search',(req,res)=>{
-    res.render('search');
+    res.render('search',{
+        title:" Search Phone Number ONLY IND.",
+    });
 });
 
 // handling form now
