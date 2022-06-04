@@ -1,0 +1,16 @@
+{
+  "name": "number-lookup",
+  "version": "1.0.0",
+  "description": "find indian phone number user name using turecallerjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "sujeet kumar sharma",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "hbs": "^4.2.0",
+    "truecallerjs": "^1.0.16"
+  }
+}
