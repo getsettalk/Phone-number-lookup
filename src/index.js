@@ -60,6 +60,7 @@ app.post('/search',(req,res)=>{
             // res.send(rs.data[0].name)
             res.render("search",{
                 phone:ph,
+                title:" Search About Phone Number IND",
                 access:rs.data[0].access, 
                 name:rs.data[0].name,
                 city:rs.data[0].city,
