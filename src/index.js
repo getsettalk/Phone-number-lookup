@@ -58,7 +58,7 @@ app.post('/search',(req,res)=>{
         sn.then(function(response) {
         
             var rs= JSON.parse(response);
-            // console.log(rs);
+             console.log(rs);
             // res.send(rs.data[0].name)
             res.render("search",{
                 phone:ph,
