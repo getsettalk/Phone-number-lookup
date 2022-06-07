@@ -46,7 +46,7 @@ app.post('/search',(req,res)=>{
     })
    }else{
         // trucaller installation id
-        const truecallerid = "a1i0w--ZTYM4L-tFnbsTaA065jXEnV6ZSmPVzFN3sheJIPe_k2qK97nTP6N2jt1a";
+        const truecallerid = "your installation id";
         var searchData = {
             number: ph,
             countryCode: "IN",
