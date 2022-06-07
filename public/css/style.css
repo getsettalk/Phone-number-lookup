@@ -84,11 +84,11 @@ color: rgb(255, 187, 0);
 .hero-sec .hero-left p{
   color: #001320;
   font-family: 'Josefin Sans', sans-serif;
-  font-size: 1.3rem;
+  font-size: 1.7rem;
   
 }
 .hero-sec .hero-left h3{
-  font-size: 4rem;
+  font-size: 4.4rem;
 font-weight: bold;
 color: orange;
 font-family: 'Kdam Thmor Pro', sans-serif;
@@ -232,15 +232,23 @@ padding: 1rem;
     }
 
     .hero-sec .hero-left h3{
-        font-size: 3rem;
+        font-size: 3.3rem;
       }
       .hero-sec .hero-left p{
+          margin-top: 1.3rem;
      text-align: center;
-        font-size: 1.2rem;
+        font-size: 1.5rem;
         font-weight: 500;
         color: rgb(33, 32, 32);
         
       }
+      
+.hero-sec .hero-left a{
+    margin-top: 1rem;
+   }
+.hero-sec .hero-left .Mobile-clr{
+    color: rgb(251, 244, 244);
+   }
       .hero-sec .hero-right{
          
         display: flex;
