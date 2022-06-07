@@ -87,6 +87,9 @@ color: rgb(255, 187, 0);
   font-size: 1.7rem;
   
 }
+.hero-sec .hero-left .Mobile-clr{
+    color: rgb(112, 110, 110);
+   }
 .hero-sec .hero-left h3{
   font-size: 4.4rem;
 font-weight: bold;
@@ -243,12 +246,12 @@ padding: 1rem;
         
       }
       
-.hero-sec .hero-left a{
-    margin-top: 1rem;
-   }
-.hero-sec .hero-left .Mobile-clr{
-    color: rgb(251, 244, 244);
-   }
+        .hero-sec .hero-left a{
+            margin-top: 1rem;
+        }
+        .hero-sec .hero-left .Mobile-clr{
+            color: rgb(251, 244, 244);
+        }
       .hero-sec .hero-right{
          
         display: flex;
