@@ -58,7 +58,7 @@ app.post('/search',(req,res)=>{
         sn.then(function(response) {
         
             var rs= JSON.parse(response);
-             console.log(rs.data[0].addresses[0].timeZone);
+             console.log(rs);
              console.log(rs.data[0].phones[0].carrier );
             //res.send(rs.data[0].phones[0].numberType)
             res.render("search",{
@@ -66,7 +66,7 @@ app.post('/search',(req,res)=>{
                 title:" Search About Phone Number IND",
                 access:rs.data[0].access, 
                 name:rs.data[0].name,
-                city:rs.data[0].city,
+                city:rs.data[0].addresses[0].city,
                 imgSrc:rs.data[0].image,
                 id:rs.data[0].id,
                  numberType:rs.data[0].phones[0].numberType,
