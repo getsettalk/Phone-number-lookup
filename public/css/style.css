@@ -92,14 +92,14 @@ color: rgb(255, 187, 0);
     display: flex;
     flex-direction: column;
 }
-.hero-sec .hero-left p{
+.hero-sec .hero-left h5{
   color: #001320;
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 1.7rem;
-  
 }
 .hero-sec .hero-left .Mobile-clr{
-    color: rgb(112, 110, 110);
+    color: rgb(46, 42, 42);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Kdam Thmor Pro', sans-serif;
    }
 .hero-sec .hero-left h3{
   font-size: 4.4rem;
