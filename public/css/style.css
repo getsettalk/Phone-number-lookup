@@ -15,6 +15,25 @@ body{
     height: 100vh;
     display: flex;
     flex-direction: column;
+    font-family: "Exo Extra Bold", sans-serif;
+	color: #0048ba;
+    background: #FEAC5E;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #4BC0C8, #C779D0, #FEAC5E);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #4BC0C8, #C779D0, #FEAC5E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+	background-size: 400% 400%;
+	animation: gradientBG 15s ease infinite;
+}
+@keyframes gradientBG {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 .header-nav{
     background-color: var(--primary-bg);
@@ -53,7 +72,7 @@ color: rgb(255, 187, 0);
     width: 100%;
     height: 85vh;
 }
-.hero-sec:after {
+/* .hero-sec:after {
     position: absolute;
     content: '';
     top: 0;
@@ -65,17 +84,9 @@ color: rgb(255, 187, 0);
     z-index: -1;
     animation: changeClr 3s ease-in-out  infinite alternate ;
     opacity: 0.8;
-    }
+    } */
 
-     @keyframes changeClr {
-            from{
-                background: linear-gradient( 70deg,rgb(244, 206, 110),var(--primary-bg));
-            }
-            to{
-                background: linear-gradient( 68deg ,rgb(244, 110, 110),var(--primary-bg));
-            }
-            
-        }
+  
 
 .hero-sec .hero-left {
     display: flex;
@@ -208,6 +219,7 @@ footer a{
 }
 .SearchResult .res-card {
 width: 500px;
+background-color: white;
 height: auto;
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
