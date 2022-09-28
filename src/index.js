@@ -46,7 +46,7 @@ app.post('/search',(req,res)=>{
     })
    }else{
         // trucaller installation id
-        const truecallerid = "a1i0o--ZvUaU5kEVQ8D7LQZNqL2LJgplEm2Nt25x61nQ10JrNqAKdtWO26OrVqdc";
+        const truecallerid = "Your installation id put here";
         var searchData = {
             number: ph,
             countryCode: "IN",
@@ -58,8 +58,8 @@ app.post('/search',(req,res)=>{
         sn.then(function(response) {
         
             var rs= JSON.parse(response);
-             console.log(os.type());
-             console.log(os.userInfo().username);
+            //  console.log(os.type());
+            //  console.log(os.userInfo().username);
              console.log(rs.data[0].phones[0].carrier );
             //res.send(rs.data[0].phones[0].numberType)
             res.render("search",{
