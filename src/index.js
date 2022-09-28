@@ -39,7 +39,7 @@ app.get('/search',(req,res)=>{
 // handling form now
 app.post('/search',(req,res)=>{
    var ph = req.body.phone;
-   if(ph.length > 10){
+   if(ph.length !== 10 || ph ==""){
     res.render("search",{
         errmsg:"Phone Number Must be only 10 digit and that is related to only india.",
         title:"Search Phone Number"
@@ -58,7 +58,7 @@ app.post('/search',(req,res)=>{
         sn.then(function(response) {
         
             var rs= JSON.parse(response);
-             console.log(rs);
+            //  console.log(rs);
              console.log(rs.data[0].phones[0].carrier );
             //res.send(rs.data[0].phones[0].numberType)
             res.render("search",{
@@ -80,7 +80,7 @@ app.post('/search',(req,res)=>{
  
 });
 
-console.log(staticPath)
+// console.log(staticPath)
 // console.log(os.arch());
 app.listen(port,()=>{
     console.log(`listing at port ${port}`);
