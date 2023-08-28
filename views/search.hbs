@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,36 +8,42 @@
     <title>{{title}}</title>
     {{>links}}
 </head>
+
 <body>
- {{>header}}
-  <!-- main sec  -->
-   
+    {{>header}}
+    <!-- main sec  -->
+
     <main>
 
         <section class="container mt-2 searchNum">
             <div class="searchBox">
-                <form action="/search" method="POST" >
+                <form action="/search" method="POST">
                     <div class="iBox">
                         <input type="text" name="phone" id="phone" placeholder="Enter Phone Number">
                         <button class="srcBtn" type="submit"> Search </button>
                     </div>
                 </form>
 
-                
+
             </div>
 
 
-            <div class="SearchResult  mt-4"> 
+            <div class="SearchResult  mt-4">
                 <div class="res-card ">
                     <div class="res-card-header">
                         Search Result :
                     </div>
                     <div class="res-card-body">
-                         {{#if errmsg}}
-                                <div class="alert alert-danger text-center">{{errmsg}}</div>
-                            {{else}}
-                             <div class="row">
-                           
+
+                        {{#if errorResp}}
+                        <div class="alert alert-danger text-center">{{errorResp}}, Try after Sometime later ?</div>
+                        {{else}}
+
+                        {{#if errmsg}}
+                        <div class="alert alert-danger text-center">{{errmsg}}</div>
+                        {{else}}
+                        <div class="row">
+
                             <div class="col-12 col-md-12 col-lg-6">
                                 Phone : <span> {{phone}} </span>
                             </div>
@@ -44,7 +51,7 @@
                                 Name : <span class="text-primary font-weight-bold"> {{name}} </span>
                             </div>
                             <div class="col-12 col-md-12 col-lg-6">
-                                city : <span>  {{city}} </span>
+                                city : <span> {{city}} </span>
                             </div>
                             <div class="col-12 col-md-12 col-lg-6">
                                 access : <span class="text-success">{{access}} </span>
@@ -56,33 +63,37 @@
                                 Number-Type : <span>{{numberType}}</span>
                             </div>
                             <div class="col-12 col-md-12 col-lg-6">
-                               carrier : <span class="text-danger">{{carrier}}</span>
+                                carrier : <span class="text-danger">{{carrier}}</span>
                             </div>
                             <div class="col-12 col-md-12 col-lg-6">
-                               timeZone : <span class="text-danger">{{timeZone}}</span>
+                                timeZone : <span class="text-danger">{{timeZone}}</span>
                             </div>
                             {{#if imgSrc }}
                             <div class="col-12 col-md-12 text-center mt-2">
-                              <img src="{{imgSrc}}" alt="userPhoto" class="img-fluid">
+                                <img src="{{imgSrc}}" alt="userPhoto" class="img-fluid">
                             </div>
 
                             {{/if}}
 
-                           
+
                         </div>
                         <div class="text-center">
-                            <small class="mt-2 text-muted">Sometimes you may not get the result because the limit of searching is reached, so try tomorrow first. {{#if osType }} OS Dev: {{osType}}  {{/if}}. we not promis you that result is accureate</small>
+                            <small class="mt-2 text-muted">Sometimes you may not get the result because the limit of
+                                searching is reached, so try tomorrow first. {{#if osType }} OS Dev: {{osType}} {{/if}}.
+                                we not promis you that result is accureate</small>
                         </div>
-                            {{/if}}
-                       
+                        {{/if}}
+
+                        {{/if}}
                     </div>
                 </div>
             </div>
         </section>
-        
+
     </main>
 
 
- {{>footer}}
+    {{>footer}}
 </body>
+
 </html>
