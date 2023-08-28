@@ -24,6 +24,7 @@ app.use(express.urlencoded({ extended: false }));
 
 // setting up views file for default  view
 app.set('view engine', 'hbs');
+app.set('views', path.join(__dirname, '../views'));
 
 // now  send  response as per request 
 app.get('/', (req, res) => {
